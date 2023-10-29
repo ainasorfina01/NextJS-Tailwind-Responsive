@@ -19,24 +19,11 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies
-        run: yarn install # Or use npm install if you prefer npm
-        uses: actions/cache@v3
-        with:
-          # See here for caching with `yarn` https://github.com/actions/cache/blob/main/examples.md#node---yarn or you can leverage caching with actions/setup-node https://github.com/actions/setup-node
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-
       - name: Build with Next.js
-        run: yarn build # Or use npm run build if you prefer npm
+        run: npm run build # Or use npm run build if you prefer npm
 
       - name: Export static HTML
-        run: yarn export # Or use npm run export if you prefer npm
+        run: npm run export # Or use npm run export if you prefer npm
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2

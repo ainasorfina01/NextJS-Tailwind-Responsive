@@ -1,6 +1,6 @@
 export const SliderData = [
   {
-    image: '/IMG_4699.jpg',
+    image: '/_next/image?url=%2FIMG_4699.jpg&w=640&q=75IMG_4699.jpg',
   },
   {
     image: '/IMG_4601.jpg',

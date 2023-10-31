@@ -10,7 +10,7 @@ const images = [img1, img2, img3, img4, img5];
 
 // Create the SliderData array
 export const SliderData = images.map((image, index) => ({
-  image,
+  image
   // You can add other properties if needed, such as alt text.
   // alt: `Image ${index + 1}`,
 }));

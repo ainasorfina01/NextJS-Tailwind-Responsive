@@ -8,7 +8,7 @@ const Portfolio = () => {
       <div className='grid grid-rows-none md:grid-cols-5 p-4 gap-4'>
         <div className='w-full h-full col-span-2 md:col-span-3 row-span-2'>
           <Image
-            src='./Background_home.jpg'
+            src='./Background_home.JPG'
             alt='/'
             layout='responsive'
             width='900'

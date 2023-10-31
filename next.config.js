@@ -4,9 +4,6 @@ const nextConfig = {
 }
 
 module.exports = {
-  images: {
-    domains: [
-      'images.unsplash.com',
-    ]
-  }
+  // No need to specify the local domain, as Next.js serves static assets from the 'public' directory by default.
 }
+

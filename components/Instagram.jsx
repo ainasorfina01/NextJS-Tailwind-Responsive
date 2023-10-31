@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import IgImg1 from '../public/IMG_7084.PNG';
 import IgImg2 from '../public/IMG_2511.jpg';
 import IgImg3 from '../public/IMG_5237.jpg';

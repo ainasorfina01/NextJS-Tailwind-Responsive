@@ -10,5 +10,5 @@ html {
 }
 
 .custom-img {
-  background-image: url('/IMG_4319.jpg');
+  background-image: url('../public/IMG_4319.jpg');
 }

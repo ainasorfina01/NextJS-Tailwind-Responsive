@@ -8,7 +8,7 @@ const Portfolio = () => {
       <div className='grid grid-rows-none md:grid-cols-5 p-4 gap-4'>
         <div className='w-full h-full col-span-2 md:col-span-3 row-span-2'>
           <Image
-            src='../public/Background_home.jpg'
+            src='Background_home.jpg'
             alt='/'
             layout='responsive'
             width='900'
@@ -17,7 +17,7 @@ const Portfolio = () => {
         </div>
         <div className='w-full h-full'>
           <Image
-            src='../public/IMG_7082.PNG'
+            src='IMG_7082.PNG'
             alt='/'
             width='215'
             height='217'
@@ -28,7 +28,7 @@ const Portfolio = () => {
         </div>
         <div className='w-full h-full'>
           <Image
-            src='../public/IMG_7065.PNG'
+            src='IMG_7065.PNG'
             alt='/'
             width='215'
             height='217'
@@ -39,7 +39,7 @@ const Portfolio = () => {
         </div>
         <div className='w-full h-full'>
           <Image
-            src='../public/IMG_6490.PNG'
+            src='IMG_6490.PNG'
             alt='/'
             width='215'
             height='217'
@@ -50,7 +50,7 @@ const Portfolio = () => {
         </div>
         <div className='w-full h-full'>
           <Image
-            src='../public/IMG_7051.PNG'
+            src='IMG_7051.PNG'
             alt='/'
             width='215'
             height='217'

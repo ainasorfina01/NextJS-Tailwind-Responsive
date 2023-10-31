@@ -14,7 +14,5 @@ export const SliderData = [
   {
     image: 'IMG_4599.JPG',
   },
-  {
-    image: 'IMG_0539.JPG',
-  },
+  
 ];

@@ -1,3 +1,4 @@
+import React from 'react';
 // Import the individual image files
 import img1 from '../public/IMG_4601.jpg';
 import img2 from '../public/IMG_2023.JPG';

@@ -15,9 +15,9 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets.SMTP_USERNAME }}
-          password: ${{ secrets.SMTP_PASSWORD }}
-          to: ${{ secrets.PM_EMAIL }}
+          username: ${{ secrets_SMTP_USERNAME }}
+          password: ${{ secrets_SMTP_PASSWORD }}
+          to: ${{ secrets_PM_EMAIL }}
           subject: 'PM Approval Request'
           body: 'QA has approved the changes. Please review and give your PM approval.'
 

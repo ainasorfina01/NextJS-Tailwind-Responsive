@@ -83,9 +83,9 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ SECRETS_SMTP_USERNAME }}
-          password: ${{ SECRETS_SMTP_PASSWORD }}
-          to: ${{ SECRETS_QA_EMAIL }}
+          username: ${{ secrets_SMTP_USERNAME }}
+          password: ${{ secrets_SMTP_PASSWORD }}
+          to: ${{ secrets_QA_EMAIL }}
           subject: 'QA Approval Request'
           body: 'Please review the QA results and approve.'
 

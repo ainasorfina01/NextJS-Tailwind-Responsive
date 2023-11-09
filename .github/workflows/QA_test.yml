@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: prod
+      name: qa-approval
       url: https://ainasorfina01.github.io/NextJS-Tailwind-Responsive/
     steps:
       - name: Checkout
@@ -86,9 +86,9 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: ${{ secrets_SMTP_USERNAME }}
-          password: ${{ secrets_SMTP_PASSWORD }}
-          to: ${{ secrets_QA_EMAIL }}
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          to: ${{ secrets.QA_EMAIL }}
           subject: 'QA Approval Request'
           body: 'Please review the QA results and approve.'
     
@@ -98,17 +98,13 @@ jobs:
           name: test-results
           path: /test/results
 
-
       - name: Download test results
         uses: actions/download-artifact@v2
         with:
           name: test-results  # The name of the artifact to download
           path: ./test-results  # The directory where the artifact should be saved
 
-
       - name: Wait for QA Approval
         run: |
-          while [ "$(gh issue view <issue_number> -q '.state')" != "closed" ]; do sleep 60; done
+          while [ "$(gh environment deployment-status view -e qa-approval -n ${{ github.run_id }} -q '.state')" != "approved" ]; do sleep 60; done
         continue-on-error: true
-
-    

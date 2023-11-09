@@ -84,6 +84,25 @@ jobs:
         with:
           path: ./out
 
+  qa_stage:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+     
+  # PM stage
+  pm_stage:
+    runs-on: ubuntu-latest
+    environment:
+      name: prod
+    needs: qa_stage
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
   # Deployment job
   deploy:
     environment:

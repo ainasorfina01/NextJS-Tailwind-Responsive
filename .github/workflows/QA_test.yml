@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     environment:
-      name: qa-approval
+      name: prod
       url: https://ainasorfina01.github.io/NextJS-Tailwind-Responsive/
     steps:
       - name: Checkout

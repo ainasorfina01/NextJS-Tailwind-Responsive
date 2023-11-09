@@ -88,7 +88,6 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: prod
-    needs: build
     steps:
       - name: Checkout
         uses: actions/checkout@v3
